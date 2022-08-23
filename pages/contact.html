@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapita Comics</title>
+    <link rel="icon" href="../resources/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="../resources/fontawesome-free-6.1.2-web/css/fontawesome.css" rel="stylesheet">
+    <link href="../resources/fontawesome-free-6.1.2-web/css/brands.css" rel="stylesheet">
+    <link href="../resources/fontawesome-free-6.1.2-web/css/solid.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header id="header">
+            <div class="headerMobile">
+                <div class="navMobile">
+                    <button class="toggleBtn"><i class="fa fa-bars"></i></button>
+                    <div class="toggleMenu-content">
+                        <a href="../index.html">Inicio</a>
+                        <a href="comics.html">Comics</a>
+                        <a href="collectionables.html">Coleccionables</a>
+                        <a href="about-us.html">Acerca de</a>
+                        <a href="contact.html">Contacto</a>
+                    </div>
+                </div>
+                <a href="../index.html"><img src="../resources/logo-web.png" alt="Logo" id="logo-header"></a>
+            </div>
+            <nav>
+                <ul id="navDesktop">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="comics.html">Comics</a></li>
+                    <li><a href="collectionables.html">Coleccionables</a></li>
+                    <li><a href="about-us.html">Acerca de</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="form-container">
+            <h3 style="text-align: center;">Ayúdanos a mejorar!</h3>
+            <form action="javascript:alert('Se envió con éxito el comentario. ¡Muchas gracias!')">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="name">Nombre:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="e-mail">Correo electrónico:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="email" placeholder="aaa@aaa.com" name="email" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="location">Localidad</label>
+                    </div>
+                    <div class="col-75">
+                        <select name="location" id="location" required>
+                            <option value="UY">Uruguay</option>
+                            <option value="AR">Argentina</option>
+                            <option value="Other">Otra localidad</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="comment">Deja aquí tu comentario:</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea name="comments" id="" cols="30" rows="5" required></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="Enviar comentario">
+                    <input type="reset" value="Limpiar">
+                </div>
+            </form>
+        </main>
+
+        <div>
+            <a href="#"><img src="../resources/up-arrow.png" alt="" id="scroll-top"></a>
+        </div>
+
+        <footer>
+            <img src="../resources/logo-footer.png" alt="Logo" id="logo-footer">
+            <div class="rrss">
+                <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter fa-xl"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook fa-xl"></i></a>
+            </div>
+            <a href="contact.html">Contáctanos <i class="fa-solid fa-square-envelope fa-lg"></i></a>
+        </footer>
+    </div>
+</body>
+
+</html>
