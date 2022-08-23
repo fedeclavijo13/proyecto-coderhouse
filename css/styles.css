@@ -94,6 +94,14 @@ footer a {
     text-decoration: none;
 }
 
+.rrss i:hover{
+    transform: scale(1.2, 1.2);
+}
+
+.rrss i:hover::after{
+    opacity: 1;
+}
+
 #scroll-top {
     height: 7vh;
     width: 7vh;
@@ -126,9 +134,29 @@ ul{
 
 .comic-card {
     width: 45vh;
-    box-shadow: 0 2px 7px #dfdfdf;
     margin: 3vh auto;
     background: #f8f3ed;
+    box-shadow: 0 2px 7px #dfdfdf;
+    transition: all 0.3s ease-in-out;
+}
+
+.comic-card::after{
+    content: '';
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px #dfdfdf;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.comic-card:hover{
+    transform: scale(1.1, 1.1);
+}
+
+.comic-card:hover::after{
+    opacity: 1;
 }
 
 .comic-image {
@@ -205,8 +233,28 @@ ul{
     width: 30vh;
     position: relative;
     box-shadow: 0 2px 5px #403B33;
+    transition: all 0.3s ease-in-out;;
     margin: 3vh auto;
     background: #55524c;
+}
+
+.collect-card::after{
+    content: '';
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px #dfdfdf;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.collect-card:hover{
+    transform: scale(1.1, 1.1);
+}
+
+.collect-card:hover::after{
+    opacity: 1;
 }
 
 .collect-image {
