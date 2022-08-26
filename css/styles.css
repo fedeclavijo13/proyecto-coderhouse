@@ -19,28 +19,24 @@ h3 {
     font-weight: 500;
 }
 
-.container {
+.container-lg {
     background-color: #EDEBE6;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas: "header"
-                         "main"
-                         "footer";
+    padding: 0 !important;
+}
+
+#carousel-home{
+    margin: 0;
 }
 
 header{
-    grid-area: header;
     text-align: center;
 }
 
-main {
-    grid-area: main;
-    padding: .5em 2em 1em 2em;
+main{
+    padding: 1em 1em 0.5em 1em;
 }
 
 footer {
-    grid-area: footer;
     background-color: #ebe3d0;
     text-align: center;
     padding: 10px;
@@ -51,30 +47,6 @@ footer {
     height: auto;
     max-width: 450px;
     padding-left: 15px;
-}
-
-nav{
-    text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #403B33;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav a {
-    display: inline-block;
-    color: #EDEBE6;
-    text-align: center;
-    padding: 10px 12px;
-    text-decoration: none;
 }
 
 nav a:hover {
@@ -126,21 +98,14 @@ ul{
 }
 
 /* Estilos para comics.html y collectionables.html*/
-.comics-flex-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
-
-.comic-card {
-    width: 45vh;
+.card {
     margin: 3vh auto;
-    background: #f8f3ed;
+    background: #f8f3ed !important;
     box-shadow: 0 2px 7px #dfdfdf;
     transition: all 0.3s ease-in-out;
 }
 
-.comic-card::after{
+.card::after{
     content: '';
     z-index: -1;
     width: 100%;
@@ -151,18 +116,15 @@ ul{
     transition: opacity 0.3s ease-in-out;
 }
 
-.comic-card:hover{
+.card:hover{
     transform: scale(1.1, 1.1);
 }
 
-.comic-card:hover::after{
+.card:hover::after{
     opacity: 1;
 }
 
 .comic-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 30vh;
     padding: 2vh;
     background: #dcdfd8;
@@ -173,23 +135,22 @@ ul{
     max-height: 100%;
 }
 
-.comic-details {
+.card-details {
     padding: 2vh;
 }
 
-.comic-details h4 a {
-    display: block;
+.card-details a {
     text-transform: uppercase;
     color: #403B33;
     text-decoration: none;
     transition: 0.3s;
 }
 
-.comic-details h4 a:hover {
+.card-details a:hover {
     color: #D3643B;
 }
 
-.comic-details p {
+.card-details p {
     font-size: 15px;
     line-height: 22px;
     text-align: justify;
@@ -197,70 +158,30 @@ ul{
     color: #918d87;
 }
 
-.comic-bottom-details {
+.card-bottom-details {
     overflow: hidden;
     border-top: 1px solid #eee;
     padding-top: 2vh;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
 }
 
-.comic-cost {
+.card-cost {
     font-size: 18px;
     color: #D3643B;
     font-weight: 600;
 }
 
-.cart-button-comic a {
+.cart-button-card a {
     color: #918d87;
     transition: 0.3s;
     font-size: 17px;
     text-decoration: none;
 }
 
-.cart-button-comic a:hover {
+.cart-button-card a:hover {
     color: #D3643B;
 }
 
-.collect-flex-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
-
-.collect-card {
-    width: 30vh;
-    position: relative;
-    box-shadow: 0 2px 5px #403B33;
-    transition: all 0.3s ease-in-out;;
-    margin: 3vh auto;
-    background: #55524c;
-}
-
-.collect-card::after{
-    content: '';
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    border-radius: 5px;
-    box-shadow: 0px 5px 15px #dfdfdf;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.collect-card:hover{
-    transform: scale(1.1, 1.1);
-}
-
-.collect-card:hover::after{
-    opacity: 1;
-}
-
 .collect-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 20vh;
     padding: 2vh;
     background: #fcfcfc;
@@ -271,55 +192,7 @@ ul{
     max-height: 100%;
 }
 
-.collect-details {
-    padding: 0 2vh 2vh 2vh;
-}
-
-.collect-details h4 a {
-    display: block;
-    text-transform: uppercase;
-    color: #ffffff;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.collect-details h4 a:hover {
-    color: #D6E1C7;
-}
-
-.collect-bottom-details {
-    overflow: hidden;
-    padding-top: .5vh;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-}
-
-.collect-cost {
-    font-size: 20px;
-    color: #D6E1C7;
-    font-weight: 600;
-}
-
-.cart-button-collect a {
-    margin-left: 5px;
-    color: #ffffff;
-    transition: 0.3s;
-    font-size: 25px;
-    text-decoration: none;
-}
-
-.cart-button-collect a:hover {
-    color: #D6E1C7;
-}
-
 /* Estilos usados para contact.html */
-.form-container{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-}
-
 form {
     border: 1px #403B33 solid;
     border-radius: 5px;
@@ -354,31 +227,24 @@ input[type=text], input[type=email], select, textarea{
     resize: vertical;
 }
 
-input[type=submit] {
-    float: right;
+#btn-submit{
     color: #ebe3d0;
     background-color: #D3643B;
-    padding: 8px 16px;
-    margin: 8px 0;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
 }
 
-input[type=submit]:hover {
+#btn-submit:hover{
     background-color: #af4f2d;
 }
 
-input[type=reset] {
-    float: right;
-    padding: 6px 12px;
-    margin: 8px 0;
+#btn-reset{
     border: 1px solid #b6b6b6;
-    border-radius: 4px;
-    cursor: pointer;
+    background-color: #EDEBE6;
+    color: #403B33;
 }
 
-input[type=reset]:hover {
+
+#btn-reset:hover {
     background-color: #d8d8d8;
 }
 
@@ -388,256 +254,31 @@ input[type=reset]:hover {
     clear: both;
 }
 
+#card-about-us{
+    padding: 1em;
+}
+
 /* Inicio media queries */
 /*vista desktop */
 @media only screen and (min-width:1200px){
-	.container{
-        margin-left: 10%;
-        margin-right: 10%;
-	}
-
-    .navMobile{
-        display: none;
-    }
-
-    #toggleMenu{
-        display: none;
-    }
-
     iframe{
         width: 650px;
         height: 366px;
     }
-
-    /* cambios para about-us.html */
-    .main-aboutus{
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-    }
-
-    .title-avatar{
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        /* width: 400px;
-        height: 400px; */
-    }
-
-    .title-avatar img{
-        width: 100%;
-        max-width: 400px;
-        height: auto;
-    }
 }
 /* vista entre desktop y mobile */
 @media only screen and (min-width:768px) and (max-width:1199px){
-    .container{
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-
-    .navMobile{
-        display: none;
-    }
-
-    #toggleMenu{
-        display: none;
-    }
-
     iframe{
         width: 500px;
         height: 300px;
-    }
-
-    
-    /* cambios para collectionables.html */
-    .collect-card {
-        width: 22vh;
-    }
-
-    /* cambios para about-us.html */
-    .main-aboutus{
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        font-size: 1.75vh;
-    }
-
-    .title-avatar{
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        /* width: 450px;
-        height: 450x; */
-    }
-
-    .avatarImg{
-        max-width: 400px;
-        height: auto;
     }
 }
 
 /*vista mobile*/
 @media only screen and (min-width:0px) and (max-width:767px){
-    /* cambios generales */
-    .headerMobile{
-        display: grid;
-        grid-template-columns: 10% 90%;
-        grid-template-rows: auto;
-        grid-template-areas: 
-            "toggleMenu logo"
-            "main main"
-            "footer footer";
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .navMobile{
-        grid-area: toggleMenu;
-    }
-
-    #logo-header{
-        grid-area: logo;
-    }
-
-    main{
-        grid-area: main;
-    }
-
-    footer{
-        grid-area: footer;
-    }
-
-    .title-avatar{
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        width: 250px;
-        height: 250px;
-    }
-
-    .avatarImg{
-        max-width: 200px;
-        height: auto;
-    }
-
-    .toggleBtn {
-        background-color: #403B33;
-        color: #EDEBE6;
-        padding: 10px;
-        margin-left: 10px;
-        font-size: 22px;
-        border: none;
-        border-radius: 5px;
-      }
-      
-      .navMobile {
-        position: relative;
-        display: inline-block;
-      }
-      
-      .toggleMenu-content {
-        display: none;
-        position: absolute;
-        background-color: #645f55;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-      }
-      
-      .toggleMenu-content a {
-        color: white;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-      }
-      
-      .toggleMenu-content a:hover {background-color: #504c43;}
-      
-      .navMobile:hover .toggleMenu-content {display: block;}
-      
-      .navMobile:hover .toggleBtn {background-color: #24211c;}
-
-    #navDesktop{
-        display: none;
-    }
-
     /* cambios para index.html */
     iframe{
         width: 200px;
         height: 150px;
-    }
-
-    /* cambios para collectionables.html */
-    .collect-card {
-        width: 15vh;
-    }
-
-    .collect-details h4 a {
-        font-size: 1.5vh;
-    }
-    
-    .collect-cost {
-        font-size: 17px;
-    }
-    
-    .cart-button-collect a {
-        font-size: 19px;
-    }
-
-    /* cambios para comics.html */
-    .comic-card {
-        width: 30vh;
-    }
-    
-    .comic-image {
-        height: 20vh;
-    }
-    
-    .comic-details {
-        padding: 2vh;
-    }
-    
-    .comic-details h4 a {
-        display: block;
-        text-transform: uppercase;
-        color: #403B33;
-        text-decoration: none;
-        transition: 0.3s;
-    }
-    
-    .comic-details h4 a:hover {
-        color: #D3643B;
-    }
-    
-    .comic-details p {
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        line-height: 1.5;
-    }
-    
-     .comic-cost {
-        font-size: 17px;
-    }
-    
-    /* cambios para about-us.html */
-    .main-aboutus{
-        display: flex;
-        flex-flow: column wrap;
-    }
-
-    .title-avatar{
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-    }
-
-    /* cambios para contact.html */
-    .col-25, .col-75, input[type=submit]{
-        width: 100%;
-        margin-top: 0;
     }
 }
