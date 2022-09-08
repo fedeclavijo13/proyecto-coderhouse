@@ -1,3 +1,11 @@
+$estilos: (
+    width-75: 75%,
+    width-25: 25%,
+    mt-6: 6px,
+    colorbtn-1: #D3643B,
+    colorbtn-2: #EDEBE6
+);
+
 form {
     border: 1px #403B33 solid;
     border-radius: 5px;
@@ -10,15 +18,15 @@ form {
             display: inline-block;
         }
         .col-25{
-            width: 25%;
-            margin-top: 6px;
+            width: map-get($estilos, width-25);
+            margin-top: map-get($estilos, mt-6);
         }
         .col-75{
-            width: 75%;
-            margin-top: 6px;
+            width: map-get($estilos, width-75);
+            margin-top: map-get($estilos, mt-6);
         }
         input[type=text], input[type=email], select, textarea{
-            width: 75%;
+            width: map-get($estilos, width-75);
             padding: 12px;
             border: 1px solid #ccc;
             border-radius: 4px;
@@ -26,7 +34,7 @@ form {
         }
         #btn-submit{
             color: #ebe3d0;
-            background-color: #D3643B;
+            background-color: map-get($estilos, colorbtn-1);
             border: none;
                 &:hover{
                     background-color: #af4f2d;
@@ -34,7 +42,7 @@ form {
         }
         #btn-reset{
             border: 1px solid #b6b6b6;
-            background-color: #EDEBE6;
+            background-color: map-get($estilos, colorbtn-2);
             color: #403B33;
                 &:hover{
                     background-color: #d8d8d8;

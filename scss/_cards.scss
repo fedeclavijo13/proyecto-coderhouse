@@ -69,8 +69,8 @@
                 }
             }
         .collect-image{
+            @extend .comic-image;
             height: 20vh;
-            padding: 2vh;
             background: #fcfcfc;
         }
             img{

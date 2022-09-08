@@ -82,7 +82,7 @@ footer {
     transform: scale(1.1, 1.1); }
   .card:hover::after {
     opacity: 1; }
-  .card .comic-image {
+  .card .comic-image, .card .collect-image {
     height: 30vh;
     padding: 2vh;
     background: #dcdfd8; }
@@ -121,7 +121,6 @@ footer {
     color: #D3643B; }
   .card .collect-image {
     height: 20vh;
-    padding: 2vh;
     background: #fcfcfc; }
   .card img {
     max-width: 100%;
@@ -166,20 +165,16 @@ form {
     display: table;
     clear: both; }
 
-/* Inicio media queries */
-/*vista desktop */
 @media only screen and (min-width: 1200px) {
   iframe {
     width: 650px;
     height: 366px; } }
 
-/* vista entre desktop y mobile */
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
   iframe {
     width: 500px;
     height: 300px; } }
 
-/*vista mobile*/
 @media only screen and (min-width: 0px) and (max-width: 767px) {
   iframe {
     width: 200px;
